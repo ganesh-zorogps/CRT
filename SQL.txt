@@ -1,0 +1,32 @@
+create table student
+(
+    id int,
+    name varchar(150),
+    age int,
+    email varchar(175)
+);
+ insert into student(id,name,age,email) value(1,"roger",40,"laugh@tale.com");
+ insert into student(id,name,age,email) value(2,"rayleigh",42,"amazon@lily.com");
+ select * from student;
+
+# You are using MYSQL
+create table sales
+(
+    sno int,
+    pro_id int,
+    pro_name varchar(150),
+    quan int,
+    category varchar(200)
+);
+insert into sales(sno,pro_id,pro_name,quan,category) values
+(1,111,"Playstation",1,"electronics"),
+(2,112,"Chimney",1,"home appliances"),
+(3,113,"shirts",2,"clothes"),
+(4,114,"hamburger",3,"food"),
+(5,115,"bacon",5,"food"),
+(6,116,"telivision",1,"electronics"),
+(7,117,"nonstick pan",1,"home appliances"),
+(8,118,"shorts",2,"clothes"),
+(9,119,"jordan halfwave",1,"footwear"),
+(10,120,"nike slides",1,"footwear");
+ select * from sales;

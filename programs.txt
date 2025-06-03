@@ -1,0 +1,377 @@
+PROGRAMS
+IF and IF-ELSE Statements:
+..Printing the Grade based on Marks
+Program:
+a=int(input("enter percentage"))
+if a in range(90,100):
+    print("o")
+elif a in range(80,90):
+    print("A+")
+elif a in range(70,80):
+    print("A")
+elif a in range(60,70):
+    print("B+")
+elif a in range(50,60):
+    print("B")
+elif a in range(0,50):
+    print("fail")
+
+..Set the available balance as 5000.Ask the user the amount they want to withdraw. Allow the withdrawl process if it satisfy with the available balance.After that process show the updated balance to the user.
+Program:
+availablebalance=5000
+AmtW=int(input("enter the amount to withdraw"))
+a=availablebalance-AmtW
+if availablebalance>AmtW:
+         print("Withdrawl in process")
+         print("updated balance",a)
+else:
+    print("insufficient balance")
+    print("updated balance",availablebalance)
+
+..Print the given number is even or odd
+Program:
+a=int(input("enter the number")
+if a%2==0:
+    print("even")
+else:
+    print("even")
+
+FOR LOOP:
+..Squares of numbers in range
+Program:
+for i in range(0,30):
+    i=i**2
+    print(i)
+
+..Print first 10 natural numbers
+Program:
+for i in range(1,11):
+    print(i)
+Note: for printing in single line use end in the print i.e. print(i,end" ")
+
+..Print first 50 even numbers
+for i in range(0,50):
+    if i%2==0:
+        print(i,end=" ") 
+
+..Print first 50 even numbers without using if condition
+Program:
+Even:
+for i in range(0,50,2):
+        print(i,end=" ")
+Odd:
+for i in range(1,50,2):
+        print(i,end=" ")
+
+..Print the values from 0 to 100 in reverse order
+Program:
+for i in range(100,-1,-1):
+        print(i,end=" ")
+Even:
+for i in range(100,-1,-2):
+        print(i,end=" ")
+Odd:
+for i in range(101,-1,-2):
+        print(i,end=" ")
+WHILE LOOP:
+
+Example:
+i=100
+while(i>0):
+    i=i-5
+    print(i,end=" ")
+    i=i+5
+..Print 100 to 1 natural numbers in while loop
+Program:
+i=101
+while(i>1):
+    i=i-1
+    print(i,end=" ")
+1 to 100:
+i=0
+while(i<100):
+    i=i+1
+    print(i,end=" ")
+
+LIST:
+..Append the positive elements to another list
+PROGRAM:
+ip=[-2,5,6,-9,-12,16]
+pos=[]
+neg=[]
+for i in range(0,len(ip)):
+    if ip[i]>0:
+     pos.append(ip[i])
+    if ip[i]<0:
+         neg.append(ip[i])
+print(pos)
+print(neg)
+
+..Factorial using recursion
+def print_fact(n):
+    fact=n
+    if(n==1):
+        return 1
+    else:
+         fact=fact*print_nat(n-1)
+         return fact
+n=print_fact(5)
+print(n)
+
+OOPS CONCEPT
+..Calci 
+class Calci:
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+    def add(a,b):
+        return a+b
+    def sub(a,b):
+        return a-b
+    def mul(a,b):
+        return a*b
+    def div(a,b):
+        return a/b
+obj=Calci
+n=int(input("enter a num "))
+if n==1:
+ print(obj.add(10,20))
+elif n==2:
+ print(obj.sub(30,20))
+elif n==3:
+ print(obj.mul(10,20))
+elif n==4:
+ print(obj.div(60,20))
+else:
+    print("enter a valid number")
+
+...Printing grade and details
+class Student_data:
+    def __init__(self,name,age,rollno,branch,cgpa):
+        self.name=name
+        self.age=age
+        self.rollno=rollno
+        self.branch
+        self.cgpa=cgpa
+    def display(name,age,rollno,branch,cgpa):
+            return f"name:{name},age={age},rollno={rollno},branch={branch},cgpa={cgpa}"
+    def grade(cgpa):
+            if cgpa>9.5:
+                return "Excellent"
+            if 7>=cgpa<9:
+                return "good"
+            if 6>=cgpa<7:
+                return "Average"          
+Student1=Student_data
+print(Student1.display("Ganesh",20,39,"ece",7.5))
+print(Student1.grade(9.6))
+
+...ELIGIBILITY
+class Student_data:
+    def __init__(self,name,age,rollno,branch,cgpa,tenth,inter,btech):
+        self.name=name
+        self.age=age
+        self.rollno=rollno
+        self.branch
+        self.cgpa=cgpa
+        self.tenth=tenth
+        self.inter=inter
+        self.btech=btech
+    def display(name,age,rollno,branch,cgpa):
+            return f"name:{name},age={age},rollno={rollno},branch={branch},cgpa={cgpa}"
+    def grade(cgpa):
+            if cgpa>95:
+                return "Excellent"
+            if 7>=cgpa<9:
+                return "good"
+            if 6>=cgpa<7:
+                return "Average"
+    def eligible(tenth,inter,btech):
+        if tenth>60 and inter>60 and btech>6s0:
+            return "eligible for placements"
+        else:
+            return "not eligible for placements"
+
+Student1=Student_data
+print(Student1.display("Ganesh",20,39,"ece",7.5))
+print(Student1.grade(9.6))
+print(Student1.eligible(65,70,75))
+
+...ATM USING OOPS
+class Atm:
+    def __init__(self,initialbal=0):
+        self.bal=initialbal
+    def deposit(self):
+        amount=int(input("enter the money to be deposited"))
+        self.bal+=amount
+        print(f"{amount} deposited successfully")
+        print(f"new balance{self.bal}")
+    def withdrawl(self):
+        amount=int(input("enter the money to be withdrwan"))
+        if amount>self.bal:
+            print("insufficient funds")
+        else:
+            self.bal-=amount
+            print(f"{amount} successfully withdrawn")
+            print(f"new balance{self.bal}")
+    def checkbal(self):
+        print(f"the available balance is {self.bal}")
+    def exit():
+        print("Thank u for ur service")
+AtmS=Atm(initialbal=99)
+while True:
+    print("1.Deposit")
+    print("2.Withdrawl")
+    print("3.Check balance")
+    print("4.exit")
+    choice=int(input("enter your choice"))
+    if choice==1:
+        AtmS.deposit()
+    elif choice==2:
+        AtmS.withdrawl()
+    elif choice==3:
+        AtmS.checkbal
+    elif choice==4:
+        AtmS.exit()
+    break
+        
+Encapsulation example with getter and setter methods:
+class Onepiece:
+    def __init__(self,navy):  #default constructor
+        self.navy=navy
+        self.__navy=navy #priavte a variable
+    def getter(self):
+        return self.__navy
+    def setter(self,navy):
+        self.__navy=navy
+Oda=Onepiece(80)
+Oda.setter(80)
+Luffy=Oda.getter()
+print(Luffy)
+ 
+
+Abstraction example method
+
+from abc import ABC,abstractmethod
+class four_wheeler(ABC):
+    @abstractmethod
+    def engine():
+        return "This engine consists of 4 valve cylinders"  #it will not print this unnecesary info
+class Endeavour(four_wheeler):
+    def car_start():
+        return "car is moving"
+car_1=Endeavour
+ans=Endeavour.car_start()
+print(ans)
+
+Single inheritance :
+
+class father:
+    def father_meth():
+        return "this a father method"
+class child(father):
+    def child_meth():
+        return "this is a child method"
+parent_obj=father
+child_obj=child
+print(parent_obj.father_meth())
+print(child_obj.child_meth())
+print(child_obj.father_meth())
+
+Multiple inheritance:
+
+class father:
+    def father_meth():
+        return "this a father method"
+class mother:
+    def mother_meth():
+        return "this is a mother method"
+class child(father,mother):
+    def child_meth():
+        return "this is a child method"
+father_obj=father
+mother_obj=mother
+child_obj=child
+print(father_obj.father_meth())
+print(mother_obj.mother_meth())
+print(child_obj.child_meth())
+print(child_obj.father_meth())
+print(child_obj.mother_meth())
+
+Multilevel inheritance:
+class grandfather:
+    def grandfather_meth():
+        return "this a grandfather method"
+class father(grandfather):
+    def father_meth():
+        return "this is a father method"
+class child(father):
+    def child_meth():
+        return "this is a child method"
+grandfather_obj=grandfather
+father_obj=father
+child_obj=child
+print(grandfather_obj.grandfather_meth())
+print(father_obj.father_meth())
+print(father_obj.grandfather_meth())
+print(child_obj.child_meth())
+print(child_obj.father_meth())
+print(child_obj.grandfather_meth())
+
+Hybrid inheritance:
+
+class grandfather:
+    def grandfather_meth():
+        return "this a grandfather method"
+class father(grandfather):
+    def father_meth():
+        return "this is a father method"
+class mother():
+    def mother_meth():
+        return "this is a mother method"    
+class child(father,mother):
+    def child_meth():
+        return "this is a child method"
+grandfather_obj=grandfather
+father_obj=father
+mother_obj=mother
+child_obj=child
+print(grandfather_obj.grandfather_meth())
+print(father_obj.father_meth())
+print(father_obj.grandfather_meth())
+print(mother_obj.mother_meth())
+print(child_obj.child_meth())
+print(child_obj.grandfather_meth())
+print(child_obj.father_meth())
+print(child_obj.mother_meth())
+
+Polymorphism:
+
+class Animal:
+    def speak():
+        return "Animal is speaking"
+class Bird():
+    def speak(Animal):
+        return "Bird is speaking"
+animal_obj=Animal
+bird_obj=Bird
+print(animal_obj.speak())
+print(bird_obj.speak())
+
+sumof squares :
+n=3456
+sum=0
+while n>0:
+    digit=n%10
+    sum=(digit*digit)+sum
+    n=n//10
+print(sum)
+
+Print sum of max and min elements in a array using sort
+arr=[9,8,-55,-89,16,10]
+arr.sort()
+print(f"minimum element is {arr[0]}")
+
+print(f"maximum element is {arr[-1]}")
+sum=arr[0]+arr[-1]
+print(sum)

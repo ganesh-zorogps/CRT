@@ -1,0 +1,62 @@
+
+odd for i in range(1,101,2):
+    print(i,end=" ")
+even for i in range(1,101):
+    print(i,end=" ")
+divisible  by 7
+a=int(input("enter the number")
+if a%7==0:
+  print("dividible")
+else:
+  print("not divisible")
+
+PILLARS OF OOPS
+
+1.Encapsulation
+2.Abstraction
+3.Polymorphism
+4.Inheritance
+
+1.ENCAPSULATION:  Binding the data and protects the internal data(Vitamin E capsule).
+***What are different access specifiers?
+
+2.ABSTRACTION: Hiding the unneccesary info and provides required info(DVD,projector interfaces but it doesn't show the background process).
+
+3.POLYMORPHISM: Different behaviour in different situations(kamal hassan).
+
+4.INHERITANCE: Deriving the properties from parent class.
+  Types of Inheritance:
+    *Single:One parent class and One child class(Parent-->Child).
+    *Multiple:  Father+Mother-->Child 
+             A child class is derived(inherits properties) from multiple                                            parent classes.
+    *Multi-level: Grandf-->Father-->Child
+              Child inherits both the properties of Grandf and father
+    *Hierarchial: Grandf+GrandM-->Father-->Child
+    *Hybrid: A combination any two inheritanaces
+          Ex: Single+multiple
+                       -----Multiple--------
+              Grandf-->father+mother-->child
+              ----Single-----
+              
+Hackerrank website
+
+'''
+You are given an integer array of size N, representing jars of chocolates. Three
+students A, B, and C respectively, will pick chocolates one by one from each chocolate
+jar, till the jar is empty, and then repeat the same with the rest of the jars. Your task
+is to fine and return an integer value representing the total number of chocolates that
+student A will have, after all the chocolates have been picked from all the jars.
+Note: Once a jar is done A will start taking the chocolates from the new jar.
+Input Format :
+input1: An integer array representing the quantity of chocolates in each jar.
+input2: An integer value N representing the number of jars.
+Output Format:
+Return an integer value representing the total number of chocolates that student A
+will have, after all the chocolates are picked.
+Example:
+Input:
+10 20 30
+3
+Output:
+21
+'''

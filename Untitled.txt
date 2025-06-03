@@ -1,0 +1,11 @@
+
+odd for i in range(1,101,2):
+    print(i,end=" ")
+even for i in range(1,101):
+    print(i,end=" ")
+divisible  by 7
+a=int(input("enter the number")
+if a%7==0:
+  print("dividible")
+else:
+  prin("not divisible")
